@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 ">
+    <br>
+    <br>
+    <h1 class="text-center">HOLA KAT
+      <span *ngIf="!mostrartitulo">{{titulo}}</span>
+      </h1>
+    <p> Soy el usuario {{usuario.nombre + ' ' + usuario.apellido}}
+      <br>
+      suma =
+    {{10+1}}
+    </p>
+    <ul>
+      <li *ngFor="let numero of arregloNumeros; let i= index">{{i + 1}} .- valor del numero {{numero}}</li>
+    </ul>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="text-center">Bindings</h1>
+    <h2 [style.color]="'blue'">Property bindings[]</h2>
+
+    <img [src]="imagenurl" [alt]="'propaganda'" [width]="imagenWidth">
+    <br>
+    <p [style.color]="'red'"
+       [style.background-color]="'yellow'"
+       [innerText]="'Hola Amigos'"></p>
+    <br>
+    <div [innerHTML]="html"></div>
+    <h2 [style.color]="'blue'">Event bidings()</h2>
+    <button class="btn btn-block btn-info" (click)="aumentarWith($event)">
+      Aumentar Imagen
+    </button>
+    <h1   (mouseenter)="reducirWith()">
+      Reducir Imagen
+    </h1>
+
+
+    <h2 [style.color]="'blue'">NgModel (two way data bindings)[()]</h2>
+    <label for="width">Width</label>
+    <label id="width"></label>
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"></div>
+</div>
+
